@@ -325,7 +325,7 @@ function App() {
           </div>
         </section>
 
-        <section id="mission" className="mission">
+        <section id="mission" className="mission" lang="th">
           <div className="container mission-grid">
             <Reveal>
               <p className="section-kicker">Mission</p>
@@ -427,8 +427,8 @@ function App() {
                 and prepare your team for the future.
               </p>
               <div className="contact-actions">
-                <a className="primary-button spotlight" href="mailto:hello@innextgen.ai">
-                  hello@innextgen.ai
+                <a className="primary-button spotlight" href="mailto:transformation@innextgen.com">
+                  transformation@innextgen.com
                   <ArrowRight size={18} />
                 </a>
                 <span className="placeholder-note">Replace with your real email, phone, or LINE later.</span>
