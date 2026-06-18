@@ -431,7 +431,7 @@ function App() {
                   transformation@innextgen.com
                   <ArrowRight size={18} />
                 </a>
-                <span className="placeholder-note">Replace with your real email, phone, or LINE later.</span>
+                <span className="placeholder-note">Contact us here</span>
               </div>
             </Reveal>
           </div>
