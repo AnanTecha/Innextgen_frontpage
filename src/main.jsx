@@ -21,6 +21,7 @@ import './styles.css';
 const navItems = [
   { label: 'Mission', href: '#mission' },
   { label: 'Services', href: '#services' },
+  { label: 'Use Cases', href: '#use-cases' },
   { label: 'Roadmap', href: '#roadmap' },
   { label: 'Contact', href: '#contact' }
 ];
@@ -29,22 +30,26 @@ const services = [
   {
     icon: BrainCircuit,
     title: 'AI Transformation Strategy',
-    text: 'Map your current operations, identify high-value AI opportunities, and create an execution roadmap that leaders can trust.'
+    text: 'Map your current operations, identify high-value AI opportunities, and create an execution roadmap that leaders can trust.',
+    thai: 'ที่ปรึกษา AI Transformation สำหรับธุรกิจไทย วางแผน use case, KPI และ roadmap ที่ผู้บริหารใช้ตัดสินใจได้จริง'
   },
   {
     icon: Bot,
     title: 'AI Agents & Workflow Automation',
-    text: 'Build practical agents for sales, operations, finance, customer service, reporting, and repetitive decision support.'
+    text: 'Build practical agents for sales, operations, finance, customer service, reporting, and repetitive decision support.',
+    thai: 'พัฒนา AI Agent และ automation สำหรับงานขาย ปฏิบัติการ บัญชี บริการลูกค้า และงานรายงานซ้ำๆ'
   },
   {
     icon: DatabaseZap,
     title: 'Data Foundation',
-    text: 'Prepare business data, dashboards, and integration patterns so AI systems can work with reliable context.'
+    text: 'Prepare business data, dashboards, and integration patterns so AI systems can work with reliable context.',
+    thai: 'จัดระบบ data strategy, dashboard และ integration เพื่อให้ AI ใช้ข้อมูลที่ถูกต้องและตรวจสอบได้'
   },
   {
     icon: GraduationCap,
     title: 'Team Enablement',
-    text: 'Train leaders and teams to adopt AI safely, confidently, and with measurable business impact.'
+    text: 'Train leaders and teams to adopt AI safely, confidently, and with measurable business impact.',
+    thai: 'อบรม AI training ให้ผู้บริหารและทีมงานใช้ AI อย่างปลอดภัย มั่นใจ และวัดผลทางธุรกิจได้'
   }
 ];
 
@@ -61,6 +66,37 @@ const roadmap = [
   ['02', 'Design', 'Prioritize use cases and define the AI roadmap, success metrics, and implementation plan.'],
   ['03', 'Build', 'Prototype, integrate, and ship AI workflows with fast feedback from the real team.'],
   ['04', 'Scale', 'Train users, improve adoption, monitor results, and expand transformation across functions.']
+];
+
+const useCases = [
+  {
+    title: 'AI Automation for Operations',
+    text: 'Automate approvals, document handling, reporting, and internal workflows so teams spend more time on decisions.',
+    thai: 'ลดงาน manual ในฝ่ายปฏิบัติการด้วย AI automation ที่เชื่อมกับ workflow จริงขององค์กร'
+  },
+  {
+    title: 'AI Agents for Sales & Service',
+    text: 'Deploy AI agents that support lead qualification, customer response, knowledge search, and follow-up tasks.',
+    thai: 'สร้าง AI Agent ช่วยทีมขายและบริการลูกค้า ตอบคำถาม ค้นข้อมูล และติดตามงานได้เร็วขึ้น'
+  },
+  {
+    title: 'Data Strategy for Executives',
+    text: 'Turn scattered data into dashboards, decision intelligence, and a trusted foundation for future AI initiatives.',
+    thai: 'ออกแบบ data strategy สำหรับผู้บริหาร เพื่อให้เห็นสถานะธุรกิจและตัดสินใจด้วยข้อมูลที่น่าเชื่อถือ'
+  },
+  {
+    title: 'AI Training for Thai Teams',
+    text: 'Enable teams to use generative AI, automation tools, and responsible AI practices in daily work.',
+    thai: 'อบรมทีมไทยให้ใช้ AI ในงานประจำวัน ตั้งแต่ prompt, workflow, automation ไปจนถึง governance'
+  }
+];
+
+const industries = [
+  'Manufacturing and industrial operations',
+  'Retail, distribution, and customer service',
+  'Finance, accounting, and back office teams',
+  'SMEs preparing for digital transformation',
+  'Executive teams building AI-first strategy'
 ];
 
 function NetworkCanvas() {
@@ -218,7 +254,7 @@ function Header() {
   return (
     <header className={`site-header ${solid ? 'is-solid' : ''}`}>
       <a className="brand" href="#top" aria-label="InNextGen home">
-        <img src="/assets/innextgen-logo.png" alt="InNextGen logo" />
+        <img src="/assets/innextgen-logo.png" alt="InNextGen Innovation Next Generation logo" />
         <span>InNextGen</span>
       </a>
       <nav className="desktop-nav" aria-label="Primary navigation">
@@ -303,6 +339,10 @@ function App() {
                 InNextGen partners with business owners and industry leaders to turn AI from a trend into
                 real operating advantage.
               </p>
+              <p className="hero-thai" lang="th">
+                ที่ปรึกษา AI Transformation สำหรับธุรกิจไทย วางกลยุทธ์ AI, automation, data และ AI Agent
+                เพื่อยกระดับองค์กรสู่การทำงานแบบ future-ready
+              </p>
               <div className="hero-actions">
                 <a className="primary-button spotlight" href="#contact">
                   Transform my business
@@ -314,7 +354,7 @@ function App() {
               </div>
             </Reveal>
             <Reveal className="signal-panel">
-              <img src="/assets/innextgen-logo.png" alt="InNextGen logo" />
+              <img src="/assets/innextgen-logo.png" alt="InNextGen AI Transformation consulting logo" />
               <div className="signal-list">
                 <span>AI Strategy</span>
                 <span>Automation</span>
@@ -355,6 +395,7 @@ function App() {
                     <Icon size={28} />
                     <h3>{service.title}</h3>
                     <p>{service.text}</p>
+                    <p className="thai-card-copy" lang="th">{service.thai}</p>
                   </Reveal>
                 );
               })}
@@ -367,6 +408,10 @@ function App() {
             <Reveal>
               <p className="section-kicker">Business Outcomes</p>
               <h2>Designed for owners who need measurable progress, not another experiment.</h2>
+              <p lang="th">
+                เราออกแบบ AI Transformation ให้โยงกับผลลัพธ์ทางธุรกิจ เช่น ลดต้นทุน เพิ่มความเร็ว
+                ยกระดับ customer experience และทำให้ทีมตัดสินใจได้จากข้อมูลจริง
+              </p>
             </Reveal>
             <Reveal className="outcome-list">
               {outcomes.map((outcome) => (
@@ -376,6 +421,28 @@ function App() {
                 </div>
               ))}
             </Reveal>
+          </div>
+        </section>
+
+        <section id="use-cases" className="use-cases">
+          <div className="container">
+            <Reveal className="section-heading">
+              <p className="section-kicker">AI Use Cases Thailand</p>
+              <h2>Practical AI use cases for Thai companies ready to move now.</h2>
+              <p className="section-intro" lang="th">
+                InNextGen ช่วยธุรกิจไทยเริ่มจาก use case ที่มีผลกระทบสูงและนำไปใช้จริงได้เร็ว
+                ตั้งแต่ AI automation, AI agents, data strategy ไปจนถึง AI training สำหรับทีมงาน
+              </p>
+            </Reveal>
+            <div className="use-case-grid">
+              {useCases.map((item) => (
+                <Reveal className="use-case-card" key={item.title}>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                  <p className="thai-card-copy" lang="th">{item.thai}</p>
+                </Reveal>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -415,6 +482,17 @@ function App() {
               <p>Help Thai teams build capability, compete globally, and move from AI awareness to AI leadership.</p>
             </Reveal>
           </div>
+          <div className="container industries-wrap">
+            <Reveal className="industries-panel">
+              <p className="section-kicker">Industries Served</p>
+              <h2>Built for leaders who want AI to change the operating model, not only the presentation deck.</h2>
+              <div className="industry-list">
+                {industries.map((industry) => (
+                  <span key={industry}>{industry}</span>
+                ))}
+              </div>
+            </Reveal>
+          </div>
         </section>
 
         <section id="contact" className="contact section-dark">
@@ -425,6 +503,10 @@ function App() {
               <p>
                 Tell us where your business is today. We will help shape the AI roadmap, prototype the highest-impact use cases,
                 and prepare your team for the future.
+              </p>
+              <p lang="th">
+                ติดต่อ InNextGen เพื่อเริ่มประเมินโอกาส AI Transformation, AI automation, data strategy
+                และ AI Agent สำหรับธุรกิจของคุณในประเทศไทย
               </p>
               <div className="contact-actions">
                 <a className="primary-button spotlight" href="mailto:transformation@innextgen.com">

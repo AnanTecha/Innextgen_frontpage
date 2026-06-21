@@ -296,6 +296,14 @@ h3 {
   line-height: 1.65;
 }
 
+.hero-thai {
+  max-width: 760px;
+  margin-bottom: 34px;
+  color: #e9f2ff;
+  font-size: clamp(1rem, 1.65vw, 1.18rem);
+  line-height: 1.78;
+}
+
 .hero-actions,
 .contact-actions {
   display: flex;
@@ -454,7 +462,8 @@ section {
 
 .mission,
 .outcomes,
-.why {
+.why,
+.use-cases {
   background: #f7faff;
   color: #06103a;
 }
@@ -481,6 +490,7 @@ section {
 
 .thai-statement p,
 .outcome-grid p,
+.section-intro,
 .contact p {
   margin-bottom: 0;
   color: #314063;
@@ -524,6 +534,13 @@ section {
   line-height: 1.68;
 }
 
+.thai-card-copy {
+  margin-top: 16px;
+  color: #dce8ff !important;
+  font-size: 0.96rem;
+  line-height: 1.72;
+}
+
 .outcome-list {
   display: grid;
   gap: 12px;
@@ -544,6 +561,37 @@ section {
 .outcome-item svg {
   flex: 0 0 auto;
   color: var(--orange);
+}
+
+.use-cases {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(0, 128, 240, 0.1), transparent 26rem),
+    radial-gradient(circle at 90% 20%, rgba(255, 128, 48, 0.09), transparent 24rem),
+    #f7faff;
+}
+
+.use-case-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.use-case-card {
+  min-height: 280px;
+  padding: 24px;
+  border: 1px solid rgba(0, 32, 112, 0.1);
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 18px 50px rgba(0, 16, 96, 0.08);
+}
+
+.use-case-card p {
+  color: #405071;
+  line-height: 1.68;
+}
+
+.use-case-card .thai-card-copy {
+  color: #314063 !important;
 }
 
 .roadmap-grid {
@@ -582,6 +630,42 @@ section {
 .why-card p {
   color: #405071;
   line-height: 1.7;
+}
+
+.industries-wrap {
+  margin-top: 18px;
+}
+
+.industries-panel {
+  margin-top: clamp(18px, 4vw, 34px);
+  padding: clamp(24px, 5vw, 46px);
+  border: 1px solid rgba(0, 32, 112, 0.1);
+  border-radius: 26px;
+  background: linear-gradient(135deg, rgba(0, 128, 240, 0.08), rgba(255, 128, 48, 0.08)), #fff;
+  box-shadow: 0 20px 60px rgba(0, 16, 96, 0.08);
+}
+
+.industries-panel h2 {
+  max-width: 920px;
+  font-size: clamp(1.85rem, 4vw, 3.4rem);
+}
+
+.industry-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.industry-list span {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  border: 1px solid rgba(0, 32, 112, 0.12);
+  border-radius: 999px;
+  padding: 0 16px;
+  color: #06103a;
+  background: rgba(255, 255, 255, 0.82);
+  font-weight: 750;
 }
 
 .contact {
@@ -671,6 +755,7 @@ footer {
   }
 
   .service-grid,
+  .use-case-grid,
   .roadmap-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -722,11 +807,13 @@ footer {
 
   .signal-list,
   .service-grid,
+  .use-case-grid,
   .roadmap-grid {
     grid-template-columns: 1fr;
   }
 
   .service-card,
+  .use-case-card,
   .roadmap-step,
   .why-card {
     min-height: auto;
